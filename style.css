@@ -1,0 +1,403 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+nav {
+  background-color: #262626;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-shadow: 0 2px  10px rgba(0,0,0,0.25);
+  position: relative;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 80px;
+  width: auto;
+  transition: transform 1.0s ease, filter 1.0s ease;
+}
+
+.nav-logo img:hover {
+  transform: rotate(360deg) scale(1.15);
+  filter: brightness(0.7);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.scroll-btn {
+  margin-top: 2rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #d0d4da;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+}
+
+.hero-name {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.featured {
+  padding: 4rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.featured-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-label {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #444;
+}
+
+.project-thumb {
+  width: 420px;
+  height: 480px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #d8dce4;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid #1a1a1a;
+  padding: 0.75rem 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.view-all-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+footer {
+  background-color: #e9e9e9;
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #888;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #888;
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.footer-links a:hover {
+  color: #1a1a1a;
+}
+
+#constellation-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-divider {
+  width: 80px;
+  border: none;
+  border-top: 1.5px solid #aaa;
+  margin-top: 0.3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.bg-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1.0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 400px;
+}
+
+.loader-text {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 0.1em;
+}
+
+.loader-track {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  position: relative;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  background: #000;
+  transition: width 0.05s linear;
+}
+
+.hamburger {
+  display: none;
+}
+
+
+@media (max-width: 500px) {
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #262626;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-left: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .project-thumb {
+    width: 85vw;
+    height: 250px;
+  }
+
+  .featured {
+    padding: 2rem 1rem 4rem;
+  }
+
+}
+

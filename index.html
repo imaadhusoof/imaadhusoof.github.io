@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+  
+  <body>
+  
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+    <canvas id="constellation-canvas"></canvas>
+
+    <div class="bg-preview" id="bg-preview">
+      <img class="bg-preview-img" id="bg-preview-img" src="" alt="" />
+    </div>
+
+    <section class="hero">
+      <h1 class="hero-name">Imaadh Usoof</h1>
+      <p class="hero-subtitle">Undergraduate CS major</p>
+      <hr class="hero-divider">
+      <a href="#featured" class="scroll-btn">&#8595;</a>
+    </section>
+    
+    <section class="featured" id="featured">
+      <h2 class="featured-title">Featured Projects</h2>
+    
+      <div class="projects-grid">
+    
+        <a href="project1.html" class="project-card" data-gif="images/p1-preview.gif"
+          onclick="event.preventDefault(); showLoader('project1.html')">
+          <p class="project-label">Space Shooter</p>
+          <div class="project-thumb">
+            <img src="images/project1.png" alt="Project 1" />
+          </div>
+        </a>
+    
+        <a href="project2.html" class="project-card" data-gif="images/p2-preview.gif"
+          onclick="event.preventDefault(); showLoader('project2.html')">
+          <p class="project-label">Shadow Dungeon</p>
+          <div class="project-thumb">
+            <img src="images/project2.png" alt="Project 2" />
+          </div>
+        </a>
+    
+        <a href="project3.html" class="project-card" data-gif="images/p3-preview.gif"
+          onclick="event.preventDefault(); showLoader('project3.html')">
+          <p class="project-label">Finance Calculator</p>
+          <div class="project-thumb">
+            <img src="images/project3.png" alt="Project 3" />
+          </div>
+        </a>
+    
+      </div>
+    
+      <a href="projects.html" class="view-all-btn">
+        View all projects &#8594;
+      </a>
+    </section>
+    
+  
+    <footer>
+      <span class="footer-copy">© 2026 Mohamed Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+
+    <script src="constellation.js"></script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+    <script>
+      const cards = document.querySelectorAll('.project-card');
+      const bgPreview = document.getElementById('bg-preview');
+
+      cards.forEach(card => {
+        const thumb = card.querySelector('.project-thumb img');
+        const originalSrc = thumb.src;
+        const gif = card.getAttribute('data-gif');
+
+        card.addEventListener('mouseenter', () => {
+          bgPreview.style.opacity = '1';
+          if (gif) thumb.src = gif;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          bgPreview.style.opacity = '0';
+          thumb.src = originalSrc;
+        });
+      });
+    </script>
+    <script src="loading.js"></script>
+  </body>
+  
+</html>

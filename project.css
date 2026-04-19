@@ -1,0 +1,206 @@
+.project-layout {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.project-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #888;
+  text-align: left;
+  margin-top: 0.2rem;
+}
+
+.project-desc {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444;
+}
+
+.github-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #5b8dd9;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.project-divider {
+  width: 60px;
+  border: none;
+  border-top: 1.5px solid #aaa;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.carousel {
+  width: 320px;
+  height: 380px;
+  border: 8px solid white;
+  outline: 2px solid #1a1a1a;
+  overflow: hidden;
+  background: #d8dce4;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #444;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.carousel-btn:hover {
+  color: #1a1a1a;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 1rem;
+}
+
+.play-btn {
+  border: 1.5px solid #1a1a1a;
+  padding: 0.6rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.play-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.project-video {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem 2rem;
+}
+
+.project-video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.next-project {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 4rem;
+}
+
+.next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: opacity 0.2s;
+}
+
+.next-btn:hover {
+  opacity: 0.6;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+
+  .project-layout {
+    flex-direction: column;
+    padding: 2rem 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-desc {
+    font-size: 0.85rem;
+  }
+
+  .carousel {
+    width: 85vw;
+    height: 280px;
+  }
+
+  .project-gallery {
+    align-items: center;
+  }
+
+  .project-actions {
+    padding: 1rem 0;
+  }
+
+  .play-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .project-video {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .next-project {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .next-btn {
+    font-size: 0.95rem;
+  }
+
+}

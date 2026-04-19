@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+  </head>
+
+  <body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="constellation-canvas"></canvas>
+
+    <main>
+      <section class="about-hero">
+
+        <div class="about-left">
+          <h1 class="about-title">about.</h1>
+          <p class="about-bio-main">
+            Third year undergraduate CS major at the University of Melbourne, 
+            with a passion for machine learning and AI systems.
+          </p>
+          <hr class="about-divider">
+          <p class="about-bio-sub">
+            Proficient across Python, Java, C and SQL with hands-on experience 
+            building neural networks, game bots, and web applications. Actively 
+            seeking opportunities in software engineering, data analytics, data
+            engineering and financial analysis
+          </p>
+
+          <div class="about-badge">
+            <span class="badge-dot"></span>
+            Open to opportunities · Melbourne, AU
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="about-headshot-wrap">
+            <img src="images/headshot.jpg" alt="Imaadh Usoof" class="about-headshot" />
+          </div>
+          <a href="https://linkedin.com/in/imaadh-usoof" target="_blank" class="about-linkedin">
+            &#128101; LinkedIn
+          </a>
+        </div>
+
+        
+      </section>
+
+      <section class="skills">
+        <h3 class="skills-title">Technical skills</h3>
+        <hr class="skills-underline">
+        <div class="skills-grid">
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="images/python.png" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="skill-tooltip">
+              <strong>Python</strong>
+              <ul>
+                <li>Pandas, matplotlib, scikit-learn</li>
+                <li>Tensorflow and pygame libraries</li>
+                <li>Basic neural networks and ML models</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="images/c.png" alt="C#" />
+              <span>C#</span>
+            </div>
+            <div class="skill-tooltip">
+              <strong>C#</strong>
+              <ul>
+                <li>Data structures and algorithms</li>
+                <li>Efficient problem solving skills</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="images/java.png" alt="Java" />
+              <span>Java</span>
+            </div>
+            <div class="skill-tooltip">
+              <strong>Java</strong>
+              <ul>
+                <li>Basic game development</li>
+                <li>Object oriented design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="images/sql.png" alt="SQL" />
+              <span>Structured Query Language</span>
+            </div>
+            <div class="skill-tooltip">
+              <strong>SQL</strong>
+              <ul>
+                <li>Database design and queries</li>
+                <li>MySQL and SQLite</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="cv-download">
+        <a href="cv.pdf" download class="cv-btn">Download CV &#8595;</a>
+      </div>
+
+    </main>
+
+    <footer>
+      <span class="footer-copy">© 2026 Mohamed Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+
+    <script src="constellation.js"></script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>

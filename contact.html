@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="constellation-canvas"></canvas>
+
+    <main>
+      <img src="images/oldarts.png" class="oldarts-silhouette" alt="Old Arts Building" />
+      <section class="contact-section">
+
+        <h1 class="contact-title">
+          <span class="contact-title-top">LET'S WORK</span>
+          <span class="contact-title-bottom">TOGETHER</span>
+        </h1>
+        <hr class="contact-divider">
+
+        <div class="contact-links">
+          <a href="mailto:musoof@student.unimelb.edu.au" class="contact-item">
+            &#9993; musoof@student.unimelb.edu.au
+          </a>
+          <a href="https://linkedin.com/in/imaadh-usoof" target="_blank" class="contact-item">
+            &#128101; LinkedIn
+          </a>
+          <a href="https://github.com/imaadhusoof" target="_blank" class="contact-item">
+            &#128187; GitHub
+          </a>
+        </div>
+
+        <hr class="contact-divider">
+
+        <form class="contact-form" action="https://formspree.io/f/xyzabc" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send message</button>
+        </form>
+
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-copy">© 2026 Mohamed Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+
+    <script src="constellation.js"></script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>

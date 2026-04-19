@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Dungeon — Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="constellation-canvas"></canvas>
+
+    <main>
+
+      <section class="project-layout">
+
+        <div class="project-info">
+          <h1 class="project-title">Shadow Dungeon</h1>
+          <p class="project-tag">Project 2</p>
+          <hr class="project-divider">
+          <p class="project-desc">A 2D, WASD controlled dungeons game with the objective of defeating the mobs and reaching the end-room to obtain treasure.</p>
+          <p class="project-desc">As a project for one of my university subjects, this game taught me the fundamental concepts of java programming, particularly object-oriented design and class based programs. Over 1000 lines of code total, 20+ java files using various programming concepts, this project cemented my proficiency in java.</p>
+          <a href="https://github.com/imaadhusoof/Shadow-Dungeon.git" target="_blank" class="github-link">&#128279; Github repository</a>
+        </div>
+
+        <div class="project-gallery">
+          <div class="carousel">
+            <img class="carousel-img" src="images/p2-1.png" alt="Shadow Dungeon screenshot" />
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prev">&#8592;</button>
+            <button class="carousel-btn" id="next">&#8594;</button>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="project-actions">
+        <a href="#" class="play-btn">Play game</a>
+      </div>
+
+      <div class="project-video">
+        <iframe
+          src="https://youtube.com/embed/8nwym_JGHvQ"
+          title="Project 2 video"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="next-project">
+        <a href="project3.html" class="next-btn">Project 3 &#8594;</a>
+      </div>
+
+    </main>
+
+    <footer>
+      <span class="footer-copy">© 2026 Mohamed Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+
+    <script src="constellation.js"></script>
+    <script>
+      const images = [
+        'images/p2-1.png',
+        'images/p2-2.png',
+        'images/p2-3.png',
+        'images/p2-4.png',
+        'images/p2-5.png'
+      ];
+      let current = 0;
+      const img = document.querySelector('.carousel-img');
+
+      document.getElementById('next').addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        img.src = images[current];
+      });
+
+      document.getElementById('prev').addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        img.src = images[current];
+      });
+    </script>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+
+  </body>
+</html>
