@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkwell — Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+    <canvas id="constellation-canvas"></canvas>
+    <main>
+      <section class="project-layout">
+        <div class="project-info">
+          <h1 class="project-title">Inkwell</h1>
+          <p class="project-tag">Project 5</p>
+          <hr class="project-divider">
+          <p class="project-desc">A cross-platform desktop application for PDF annotation and note-taking, designed as a free alternative to paid tools like Adobe Acrobat.</p>
+          <p class="project-desc">Built with Electron, React and TypeScript, Inkwell supports stylus and mouse-based annotation tools rendered via HTML Canvas. Annotations are stored locally in SQLite for offline-first usage, with the Electron main process and React renderer communicating via IPC for file system access and PDF rendering through PDF.js.</p>
+          <a href="#" target="_blank" class="github-link">&#128279; Github repository</a>
+        </div>
+        <div class="project-gallery">
+          <div class="carousel">
+            <img class="carousel-img" src="images/p5-1.png" alt="Inkwell screenshot" />
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prev">&#8592;</button>
+            <button class="carousel-btn" id="next">&#8594;</button>
+          </div>
+        </div>
+      </section>
+      <div class="project-video">
+        <iframe
+          src=""
+          title="Inkwell demo"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="next-project">
+        <a href="project1.html" class="next-btn">Project 1 &#8594;</a>
+      </div>
+    </main>
+    <footer>
+      <span class="footer-copy">© 2026 Mohamed Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+    <script src="constellation.js"></script>
+    <script>
+      const images = [
+        'images/p5-1.png',
+        'images/p5-2.png',
+        'images/p5-3.png',
+      ];
+      let current = 0;
+      const img = document.querySelector('.carousel-img');
+      document.getElementById('next').addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        img.src = images[current];
+      });
+      document.getElementById('prev').addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        img.src = images[current];
+      });
+    </script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
