@@ -21,7 +21,7 @@
 .project-tag {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #888;
+  color: var(--text-muted);
   text-align: left;
   margin-top: 0.2rem;
 }
@@ -30,13 +30,13 @@
   font-size: 0.92rem;
   font-weight: 400;
   line-height: 1.8;
-  color: #444;
+  color: var(--text-muted);
 }
 
 .github-link {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #5b8dd9;
+  color: var(--accent);
   text-decoration: none;
   margin-top: 0.5rem;
 }
@@ -56,15 +56,15 @@
 .project-divider {
   width: 60px;
   border: none;
-  border-top: 1.5px solid #aaa;
+  border-top: 1.5px solid var(--border-strong);
   margin: 0.2rem 0 0.5rem;
 }
 
 .carousel {
   width: 320px;
   height: 380px;
-  border: 8px solid white;
-  outline: 2px solid #1a1a1a;
+  border: 8px solid var(--nav-bg);
+  outline: 1.5px solid var(--border-strong);
   overflow: hidden;
   background: #000;
 }
@@ -87,13 +87,13 @@
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
-  color: #444;
+  color: var(--text-muted);
   padding: 0.2rem 0.5rem;
   transition: color 0.2s, transform 0.2s ease;
 }
 
 .carousel-btn:hover {
-  color: #1a1a1a;
+  color: var(--text);
   transform: scale(1.15);
 }
 
@@ -104,22 +104,22 @@
 }
 
 .play-btn {
-  border: 1.5px solid #1a1a1a;
+  border: 1.5px solid var(--border-strong);
   padding: 0.6rem 2rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--text);
   border-radius: 2px;
   transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .play-btn:hover {
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--text);
+  color: var(--bg);
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
 }
 
 .project-video {
@@ -132,7 +132,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   border: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .next-project {
@@ -149,7 +149,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--text);
   transition: opacity 0.2s, transform 0.2s ease;
 }
 

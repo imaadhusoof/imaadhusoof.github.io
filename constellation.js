@@ -57,7 +57,7 @@ function draw() {
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < MAX_DIST) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(120, 140, 180, ${(1 - dist / MAX_DIST) * 0.5})`;
+        ctx.strokeStyle = `rgba(150, 165, 205, ${(1 - dist / MAX_DIST) * 0.5})`;
         ctx.lineWidth = 0.8;
         ctx.moveTo(nodes[i].x, nodes[i].y);
         ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -73,7 +73,7 @@ function draw() {
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < MOUSE_RADIUS) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(91, 141, 217, ${(1 - dist / MOUSE_RADIUS) * 0.6})`;
+        ctx.strokeStyle = `rgba(111, 155, 224, ${(1 - dist / MOUSE_RADIUS) * 0.6})`;
         ctx.lineWidth = 1;
         ctx.moveTo(n.x, n.y);
         ctx.lineTo(mouse.x, mouse.y);
@@ -82,7 +82,7 @@ function draw() {
     }
     ctx.beginPath();
     ctx.arc(mouse.x, mouse.y, 3.5, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(91, 141, 217, 0.9)';
+    ctx.fillStyle = 'rgba(111, 155, 224, 0.9)';
     ctx.fill();
   }
 
@@ -104,7 +104,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.arc(n.x, n.y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(100, 120, 160, ${alpha})`;
+    ctx.fillStyle = `rgba(190, 205, 235, ${alpha})`;
     ctx.fill();
   }
 }

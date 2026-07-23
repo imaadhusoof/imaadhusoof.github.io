@@ -19,7 +19,7 @@
 .projects-divider {
   width: 60px;
   border: none;
-  border-top: 1.5px solid #aaa;
+  border-top: 1.5px solid var(--border-strong);
   margin: 1.5rem 0;
 }
 
@@ -35,19 +35,19 @@
   gap: 2rem;
   padding: 2.2rem 1rem;
   margin: 0 -1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border);
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--text);
   border-radius: 4px;
   transition: background-color 0.25s ease;
 }
 
 .project-row:first-child {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border);
 }
 
 .project-row:hover {
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(255,255,255,0.03);
 }
 
 .project-row-thumb {
@@ -57,8 +57,8 @@
   overflow: hidden;
   background: #000;
   flex-shrink: 0;
-  border: 5px solid white;
-  outline: 1.5px solid #1a1a1a;
+  border: 5px solid var(--nav-bg);
+  outline: 1.5px solid var(--border-strong);
 }
 
 .project-row-thumb img {
@@ -83,7 +83,7 @@
 .project-row-tag {
   font-size: 1.00rem;
   font-weight: 500;
-  color: #888;
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -95,7 +95,7 @@
 .project-row-desc {
   font-size: 1.17rem;
   font-weight: 400;
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -111,21 +111,21 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   padding: 0.2rem 0.65rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
-  color: #555;
+  color: var(--text-muted);
 }
 
 .project-row-arrow {
   font-size: 1.8rem;
-  color: #888;
+  color: var(--text-faint);
   flex-shrink: 0;
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .project-row:hover .project-row-arrow {
   transform: translateX(6px);
-  color: #1a1a1a;
+  color: var(--text);
 }
 
 
