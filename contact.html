@@ -69,6 +69,14 @@
         </form>
 
       </section>
+
+      <section class="torch-section" data-reveal>
+        <div class="torch-wrap" id="torch-wrap">
+          <img src="images/oldarts.png" alt="University of Melbourne, Old Arts building" class="torch-img torch-dim" />
+          <img src="images/oldarts.png" alt="" aria-hidden="true" class="torch-img torch-bright" />
+        </div>
+        <p class="torch-caption">University of Melbourne &middot; Old Arts</p>
+      </section>
     </main>
 
     <footer>
@@ -90,6 +98,23 @@
         hamburger.classList.toggle('open');
         navLinks.classList.toggle('open');
       });
+    </script>
+    <script>
+      const torchWrap = document.getElementById('torch-wrap');
+      if (torchWrap) {
+        const setTorchPos = (x, y) => {
+          const rect = torchWrap.getBoundingClientRect();
+          torchWrap.style.setProperty('--mx', (x - rect.left) + 'px');
+          torchWrap.style.setProperty('--my', (y - rect.top) + 'px');
+        };
+        torchWrap.addEventListener('mousemove', (e) => {
+          setTorchPos(e.clientX, e.clientY);
+          torchWrap.classList.add('torch-active');
+        });
+        torchWrap.addEventListener('mouseleave', () => {
+          torchWrap.classList.remove('torch-active');
+        });
+      }
     </script>
   </body>
 </html>
