@@ -3,11 +3,85 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Found</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Page Not Found — Imaadh Usoof</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .not-found {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 4rem 1.5rem;
+      }
+      .not-found-code {
+        font-size: 5rem;
+        font-weight: 800;
+        color: #d0d4da;
+        line-height: 1;
+      }
+      .not-found-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .not-found-desc {
+        font-size: 0.95rem;
+        color: #888;
+        max-width: 360px;
+      }
+      .not-found-btn {
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>Page Not Found</h1>
-    <p>The requested page was not found.</p>
+
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="IU logo" />
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="constellation-canvas"></canvas>
+
+    <main class="not-found" data-reveal>
+      <p class="not-found-code">404</p>
+      <h1 class="not-found-title">Page not found</h1>
+      <p class="not-found-desc">The page you're looking for doesn't exist or may have moved.</p>
+      <a href="index.html" class="view-all-btn not-found-btn">Back to home</a>
+    </main>
+
+    <footer>
+      <span class="footer-copy">© 2026 Imaadh Usoof</span>
+      <ul class="footer-links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="projects.html">projects</a></li>
+      </ul>
+    </footer>
+
+    <script src="constellation.js"></script>
+    <script src="animations.js"></script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>

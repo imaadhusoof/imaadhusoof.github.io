@@ -29,17 +29,17 @@
     <div class="bg-preview" id="bg-preview">
       <img class="bg-preview-img" id="bg-preview-img" src="" alt="" />
     </div>
-    <section class="hero">
+    <section class="hero" data-reveal="stagger">
       <h1 class="hero-name">Imaadh Usoof</h1>
       <p class="hero-subtitle">Undergraduate CS major</p>
       <hr class="hero-divider">
       <a href="#featured" class="scroll-btn">&#8595;</a>
     </section>
-    
+
     <section class="featured" id="featured">
-      <h2 class="featured-title">Featured Projects</h2>
-    
-      <div class="projects-grid">
+      <h2 class="featured-title" data-reveal>Featured Projects</h2>
+
+      <div class="projects-grid" data-reveal="stagger">
     
         <a href="project4.html" class="project-card" data-gif="images/p4-preview.gif"
           onclick="event.preventDefault(); showLoader('project4.html')">
@@ -67,7 +67,7 @@
     
       </div>
     
-      <a href="projects.html" class="view-all-btn">
+      <a href="projects.html" class="view-all-btn" data-reveal>
         View all projects &#8594;
       </a>
     </section>
@@ -82,6 +82,7 @@
       </ul>
     </footer>
     <script src="constellation.js"></script>
+    <script src="animations.js"></script>
     <script>
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('nav-links');

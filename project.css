@@ -74,6 +74,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.2s ease;
 }
 
 .carousel-controls {
@@ -88,11 +89,12 @@
   cursor: pointer;
   color: #444;
   padding: 0.2rem 0.5rem;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s ease;
 }
 
 .carousel-btn:hover {
   color: #1a1a1a;
+  transform: scale(1.15);
 }
 
 .project-actions {
@@ -110,12 +112,14 @@
   text-decoration: none;
   color: #1a1a1a;
   border-radius: 2px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .play-btn:hover {
   background: #1a1a1a;
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 .project-video {
@@ -146,11 +150,12 @@
   font-weight: 600;
   text-decoration: none;
   color: #1a1a1a;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s ease;
 }
 
 .next-btn:hover {
   opacity: 0.6;
+  transform: translateX(4px);
 }
 
 main {

@@ -29,7 +29,7 @@
     <canvas id="constellation-canvas"></canvas>
 
     <main>
-      <section class="about-hero">
+      <section class="about-hero" data-reveal="stagger">
 
         <div class="about-left">
           <h1 class="about-title">about.</h1>
@@ -66,7 +66,7 @@
       <section class="skills">
         <h3 class="skills-title">Technical skills</h3>
         <hr class="skills-underline">
-        <div class="skills-grid">
+        <div class="skills-grid" data-reveal="stagger">
 
           <div class="skill-item">
             <div class="skill-icon">
@@ -128,7 +128,7 @@
         </div>
       </section>
 
-      <div class="cv-download">
+      <div class="cv-download" data-reveal>
         <a href="cv.pdf" download class="cv-btn">Download CV &#8595;</a>
       </div>
 
@@ -144,6 +144,7 @@
     </footer>
 
     <script src="constellation.js"></script>
+    <script src="animations.js"></script>
     <script>
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('nav-links');

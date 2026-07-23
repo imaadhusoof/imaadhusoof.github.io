@@ -28,9 +28,14 @@ nav {
   justify-content: space-between;
   padding: 0 2.5rem;
   box-shadow: 0 2px  10px rgba(0,0,0,0.25);
-  position: relative;
+  position: sticky;
   top: 0;
   z-index: 100;
+  transition: box-shadow 0.3s ease;
+}
+
+nav.nav-scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .nav-logo {
@@ -59,14 +64,29 @@ nav {
 }
 
 .nav-links a {
+  position: relative;
   color: #ffffff;
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 400;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: opacity 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: width 0.25s ease;
 }
 .nav-links a:hover {
-  opacity: 0.6;
+  opacity: 0.85;
+}
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -104,6 +124,19 @@ nav {
   text-decoration: none;
   color: #444;
   font-size: 1rem;
+  transition: background 0.2s, transform 0.2s ease;
+  animation: scrollBounce 2s ease-in-out 1.2s infinite;
+}
+
+.scroll-btn:hover {
+  background: #b8bec8;
+  transform: scale(1.08);
+  animation-play-state: paused;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
 .hero-name {
@@ -156,19 +189,28 @@ nav {
 }
 
 .project-thumb {
-  width: 420px;
-  height: 480px;
+  width: clamp(220px, 26vw, 420px);
+  height: clamp(250px, 30vw, 480px);
   border-radius: 4px;
   overflow: hidden;
   background: #d8dce4;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
 }
 
+.project-card:hover .project-thumb {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
 
 .project-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.06);
 }
 
 .view-all-btn {
@@ -183,12 +225,14 @@ nav {
   text-decoration: none;
   color: #1a1a1a;
   border-radius: 2px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .view-all-btn:hover {
   background: #1a1a1a;
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 footer {
@@ -399,5 +443,54 @@ html {
     padding: 2rem 1rem 4rem;
   }
 
+}
+
+/* Scroll reveal (see animations.js) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="stagger"] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+[data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal="stagger"].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="stagger"].is-visible > *:nth-child(1) { transition-delay: 0s; }
+[data-reveal="stagger"].is-visible > *:nth-child(2) { transition-delay: 0.1s; }
+[data-reveal="stagger"].is-visible > *:nth-child(3) { transition-delay: 0.2s; }
+[data-reveal="stagger"].is-visible > *:nth-child(4) { transition-delay: 0.3s; }
+[data-reveal="stagger"].is-visible > *:nth-child(5) { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="stagger"] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .scroll-btn {
+    animation: none !important;
+  }
 }
 

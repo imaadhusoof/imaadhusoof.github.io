@@ -25,7 +25,7 @@
     </nav>
     <canvas id="constellation-canvas"></canvas>
     <main>
-      <section class="project-layout">
+      <section class="project-layout" data-reveal="stagger">
         <div class="project-info">
           <h1 class="project-title">Inkwell</h1>
           <p class="project-tag">Project 5</p>
@@ -65,6 +65,7 @@
       </ul>
     </footer>
     <script src="constellation.js"></script>
+    <script src="animations.js"></script>
     <script>
       const images = [
         'images/p5-1.png',
@@ -73,13 +74,22 @@
       ];
       let current = 0;
       const img = document.querySelector('.carousel-img');
+
+      function setImage(src) {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = src;
+          img.style.opacity = '1';
+        }, 150);
+      }
+
       document.getElementById('next').addEventListener('click', () => {
         current = (current + 1) % images.length;
-        img.src = images[current];
+        setImage(images[current]);
       });
       document.getElementById('prev').addEventListener('click', () => {
         current = (current - 1 + images.length) % images.length;
-        img.src = images[current];
+        setImage(images[current]);
       });
     </script>
     <script>

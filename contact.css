@@ -77,13 +77,14 @@
   background: transparent;
   color: #1a1a1a;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
   resize: vertical;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(26,26,26,0.08);
 }
 
 .submit-btn {
@@ -97,11 +98,13 @@
   border-radius: 2px;
   cursor: pointer;
   align-self: flex-start;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .submit-btn:hover {
-  opacity: 0.75;
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
 
