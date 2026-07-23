@@ -23,4 +23,13 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
+
+  document.querySelectorAll('.project-thumb img, .project-row-thumb img, .carousel-img').forEach(img => {
+    const hideOnError = () => { img.style.display = 'none'; };
+    if (img.complete && img.naturalWidth === 0) {
+      hideOnError();
+    } else {
+      img.addEventListener('error', hideOnError);
+    }
+  });
 })();
