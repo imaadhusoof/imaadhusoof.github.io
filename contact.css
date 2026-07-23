@@ -152,11 +152,9 @@
 .torch-wrap {
   position: relative;
   width: 100%;
-  max-width: 340px;
+  max-width: 480px;
   aspect-ratio: 2 / 3;
-  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   --mx: 50%;
   --my: 30%;
 }
@@ -185,13 +183,6 @@
 
 .torch-wrap.torch-active .torch-bright {
   opacity: 1;
-}
-
-.torch-caption {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-faint);
-  letter-spacing: 0.02em;
 }
 
 
