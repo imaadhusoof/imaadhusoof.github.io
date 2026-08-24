@@ -37,6 +37,7 @@
           <hr class="project-divider">
           <p class="project-desc">A full-stack web application for building an investment portfolio. It tracks a diversified set of stocks and ETFs, showing 5 years of price history, live-updating quotes and sector breakdowns to put together portfolios with different rates of return at different risk-tolerance levels.</p>
           <p class="project-desc">The backend is a FastAPI service that fetches market data, caches it to disk for speed, and serves it through a REST API. The frontend is a React and TypeScript single-page app with SVG charts built in along with a portfolio setup flow. Deployed on AWS.</p>
+          <p class="project-desc">The recommendation engine is built on Modern Portfolio Theory. It estimates each asset's expected return, volatility and correlations from five years of daily data, then solves a Markowitz mean-variance optimization to find the allocation that earns the most return for a given level of risk — shifted along the efficient frontier by the chosen risk tolerance. Shrinkage estimators stop the optimizer from over-trusting noisy historical averages, keeping the mix diversified, and a Monte Carlo simulation projects the portfolio forward to show a range of possible outcomes rather than a single number.</p>
           <p class="project-desc">Options pricing coming soon.</p>
           <a href="https://github.com/imaadhusoof/Finance-website.git" target="_blank" class="github-link">&#128279; Github repository</a>
         </div>
