@@ -35,8 +35,24 @@
           <h1 class="project-title">Shadow Dungeon</h1>
           <p class="project-tag">Project 2</p>
           <hr class="project-divider">
-          <p class="project-desc">A 2D, WASD controlled dungeons game with the objective of defeating the mobs and reaching the end-room to obtain treasure.</p>
-          <p class="project-desc">As a project for one of my university subjects, this game taught me the fundamental concepts of java programming, particularly object-oriented design and class based programs. Over 1000 lines of code total, 20+ java files using various programming concepts, this project cemented my proficiency in java.</p>
+          <p class="project-desc">A top-down dungeon shooter written in Java. You pick a character: the Robot, who earns extra coins for every kill, or the Marine, who's immune to river damage. Then you fight through two battle rooms to reach the treasure at the end. Doors lock behind you until every enemy in the room is cleared.</p>
+          <p class="project-desc">Enemies range from Bullet Kin that shoot fireballs at you to Key Bullet Kin that patrol a set route and drop keys for treasure chests. Coins from kills and smashed baskets buy health and weapon upgrades in the store.</p>
+          <p class="project-desc">I built it for a university software design subject, and it's where object-oriented design really clicked for me. It has an abstract Enemy class with specialised subclasses, a shared Projectile base for bullets and fireballs, and a Damageable interface for anything that can be shot. Every room layout and balance value is read from a config file, so levels can be redesigned without touching the code. In total it's about 2,000 lines across 26 classes.</p>
+          <div class="built-with">
+            <div class="built-with-row">
+              <span class="built-with-label">Languages</span>
+              <ul class="chips">
+                <li class="chip"><img src="images/icons/java.svg" alt="" />Java</li>
+              </ul>
+            </div>
+            <div class="built-with-row">
+              <span class="built-with-label">Tech stack</span>
+              <ul class="chips">
+                <li class="chip">Bagel (LWJGL)</li>
+                <li class="chip"><img src="images/icons/maven.svg" alt="" />Maven</li>
+              </ul>
+            </div>
+          </div>
           <a href="https://github.com/imaadhusoof/Shadow-Dungeon.git" target="_blank" class="github-link">&#128279; Github repository</a>
         </div>
 
@@ -51,10 +67,6 @@
         </div>
 
       </section>
-
-      <div class="project-actions">
-        <a href="#" class="play-btn">Play game</a>
-      </div>
 
       <div class="project-video">
         <iframe

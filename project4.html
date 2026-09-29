@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Builder — Imaadh Usoof</title>
+    <title>Inkwell — Imaadh Usoof</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project.css">
   </head>
   <body>
-
     <nav>
       <a href="index.html" class="nav-logo">
         <img src="images/logo.png" alt="IU logo" />
@@ -24,68 +23,53 @@
         <li><a href="projects.html">projects</a></li>
       </ul>
     </nav>
-
     <canvas id="constellation-canvas"></canvas>
-
     <main>
-
       <section class="project-layout" data-reveal="stagger">
-
         <div class="project-info">
-          <h1 class="project-title">Portfolio Builder</h1>
-          <p class="project-tag">Project 3</p>
+          <h1 class="project-title">Inkwell</h1>
+          <p class="project-tag">Project 4</p>
           <hr class="project-divider">
-          <p class="project-desc">A full-stack web app that builds an investment portfolio for you. You choose an amount, a risk appetite and a time horizon, and it recommends how to split your money across a curated set of 18 stocks, ETFs, bonds and gold. It then shows where that portfolio could be in anywhere from 1 to 50 years.</p>
-          <p class="project-desc">The recommendation engine is built on Modern Portfolio Theory. From five years of daily prices, it estimates each asset's expected return and how the assets move together. It then solves a Markowitz mean-variance optimisation with SciPy to find the mix that earns the most return for the risk you've chosen. Historical averages are noisy, so I shrink the estimates to stop the optimiser piling into whatever happened to perform best, and I cap any single asset at 25%. A 6,000-path Monte Carlo simulation then projects the portfolio forward as a range of outcomes rather than a single number.</p>
-          <p class="project-desc">The backend is a FastAPI service that pulls market data from Yahoo Finance, caches it on disk and refreshes it every night, so pages load instantly. The frontend is a React and TypeScript single-page app with charts I drew by hand in SVG, without a chart library. It runs on an AWS server behind nginx with HTTPS, and it's covered by automated tests.</p>
-          <p class="project-desc">Options pricing coming soon.</p>
+          <p class="project-desc">A desktop app for annotating PDFs and taking notes beside them, designed as a free alternative to paid tools like Adobe Acrobat. You can open several PDFs in tabs, write on them with a pressure-sensitive pen or a highlighter, keep Markdown notes alongside, and export a copy with your annotations built in.</p>
+          <p class="project-desc">Most of the work went into making writing feel smooth. Each page is split into three canvas layers, so only the stroke you're drawing redraws as you write. Pen input uses every sample the stylus reports, and only the pages near the screen are rendered, so a 300-page PDF opens as quickly as a short one. The highlighter blends into the page like real ink instead of covering the text.</p>
+          <p class="project-desc">It's built with Electron, React and TypeScript, with PDF.js rendering the pages and everything saved locally on your computer. Export uses pdf-lib to draw your strokes into the original PDF as vector shapes, so they show up in any PDF reader.</p>
           <div class="built-with">
             <div class="built-with-row">
               <span class="built-with-label">Languages</span>
               <ul class="chips">
-                <li class="chip"><img src="images/icons/python.svg" alt="" />Python</li>
                 <li class="chip"><img src="images/icons/typescript.svg" alt="" />TypeScript</li>
               </ul>
             </div>
             <div class="built-with-row">
               <span class="built-with-label">Tech stack</span>
               <ul class="chips">
-                <li class="chip"><img src="images/icons/fastapi.svg" alt="" />FastAPI</li>
+                <li class="chip"><img src="images/icons/electron.svg" alt="" />Electron</li>
                 <li class="chip"><img src="images/icons/react.svg" alt="" />React</li>
-                <li class="chip"><img src="images/icons/numpy.svg" alt="" />NumPy</li>
-                <li class="chip">SciPy</li>
-                <li class="chip"><img src="images/icons/pandas.svg" alt="" />pandas</li>
+                <li class="chip">PDF.js</li>
+                <li class="chip">pdf-lib</li>
                 <li class="chip"><img src="images/icons/vitejs.svg" alt="" />Vite</li>
-                <li class="chip"><img src="images/icons/aws.svg" alt="" />AWS</li>
-                <li class="chip">nginx</li>
               </ul>
             </div>
           </div>
-          <a href="https://github.com/imaadhusoof/Finance-website.git" target="_blank" class="github-link">&#128279; Github repository</a>
+          <a href="https://github.com/imaadhusoof/Inkwell" target="_blank" class="github-link">&#128279; Github repository</a>
         </div>
-
         <div class="project-gallery">
           <div class="carousel">
-            <img class="carousel-img" src="images/p3-1.png" alt="Portfolio Builder screenshot" />
+            <img class="carousel-img" src="images/p4-1.png" alt="Inkwell screenshot" />
           </div>
           <div class="carousel-controls">
             <button class="carousel-btn" id="prev">&#8592;</button>
             <button class="carousel-btn" id="next">&#8594;</button>
           </div>
         </div>
-
       </section>
-
       <div class="project-actions">
-        <a href="https://finance.imaadhusoof.com" target="_blank" rel="noopener" class="play-btn">View website</a>
+        <a href="https://github.com/imaadhusoof/Inkwell/releases/latest/download/Inkwell-Setup.exe" class="play-btn">Download for Windows</a>
       </div>
-
       <div class="next-project">
-        <a href="project4.html" class="next-btn">Project 4 &#8594;</a>
+        <a href="project1.html" class="next-btn">Project 1 &#8594;</a>
       </div>
-
     </main>
-
     <footer>
       <span class="footer-copy">© 2026 Imaadh Usoof</span>
       <ul class="footer-links">
@@ -94,16 +78,12 @@
         <li><a href="projects.html">projects</a></li>
       </ul>
     </footer>
-
     <script src="constellation.js"></script>
     <script src="animations.js"></script>
     <script>
       const images = [
-        'images/p3-1.png',
-        'images/p3-2.png',
-        'images/p3-3.png',
-        'images/p3-4.png',
-        'images/p3-5.png'
+        'images/p4-1.png',
+        'images/p4-2.png',
       ];
       let current = 0;
       const img = document.querySelector('.carousel-img');
@@ -120,22 +100,18 @@
         current = (current + 1) % images.length;
         setImage(images[current]);
       });
-
       document.getElementById('prev').addEventListener('click', () => {
         current = (current - 1 + images.length) % images.length;
         setImage(images[current]);
       });
     </script>
-
     <script>
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.getElementById('nav-links');
-
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         navLinks.classList.toggle('open');
       });
     </script>
-    
   </body>
 </html>

@@ -33,6 +33,64 @@
   color: var(--text-muted);
 }
 
+/* "Built with" section: languages and tech stack as icon chips */
+.built-with {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 0.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.built-with-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.built-with-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text);
+  /* Near-opaque so the constellation lines don't show through */
+  background: rgba(30, 32, 37, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--border-strong);
+  background: rgba(38, 41, 47, 0.95);
+  transform: translateY(-1px);
+}
+
+.chip img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .github-link {
   font-size: 0.88rem;
   font-weight: 600;

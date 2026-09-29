@@ -35,9 +35,26 @@
           <h1 class="project-title">Space shooter</h1>
           <p class="project-tag">Project 1</p>
           <hr class="project-divider">
-          <p class="project-desc">An endless, WASD controlled spaceship flying through space shooting down asteroids and facing boss battles.</p>
-          <p class="project-desc">My first project, completed in 11th grade. The goal was to create an 'endless' game that had simple controls, in this case 'A' key to move left and 'D' key to move right. That way a simple machine learning model would be able to learn and play well.</p>
-          <p class="project-desc">Made entirely using python, using the pygame and tensorflow libraries.</p>
+          <p class="project-desc">An endless space shooter built with Pygame. You steer a ship along the bottom of the screen with the arrow keys and blast the asteroids raining down. Every 10 kills, a boss arrives that sweeps across the screen and fires back. Shields give you three seconds of invulnerability, and you earn a new one each time a boss appears.</p>
+          <p class="project-desc">It was my first project, which I made in 11th grade, and I designed it around simple controls so a machine learning agent could learn to play it. I built a headless copy of the game as a reinforcement-learning environment and trained a Deep Q-Network in TensorFlow. The agent sees the five closest asteroids, chooses whether to move, wait or shoot, and learns from rewards for staying alive and destroying asteroids. Experience replay and a separate target network keep its training stable.</p>
+          <p class="project-desc">You can play it right here in your browser. I compiled it to WebAssembly with pygbag, which meant replacing Pygame's timers with frame-based timing and making the game loop asynchronous.</p>
+          <div class="built-with">
+            <div class="built-with-row">
+              <span class="built-with-label">Languages</span>
+              <ul class="chips">
+                <li class="chip"><img src="images/icons/python.svg" alt="" />Python</li>
+              </ul>
+            </div>
+            <div class="built-with-row">
+              <span class="built-with-label">Tech stack</span>
+              <ul class="chips">
+                <li class="chip">Pygame</li>
+                <li class="chip"><img src="images/icons/tensorflow.svg" alt="" />TensorFlow</li>
+                <li class="chip"><img src="images/icons/numpy.svg" alt="" />NumPy</li>
+                <li class="chip"><img src="images/icons/wasm.svg" alt="" />WebAssembly</li>
+              </ul>
+            </div>
+          </div>
           <a href="https://github.com/imaadhusoof/Space-shooter.git" target="_blank" class="github-link">&#128279; Github repository</a>
         </div>
 
