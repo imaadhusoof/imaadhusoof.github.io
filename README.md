@@ -8,7 +8,6 @@ My personal portfolio site, live at [imaadhusoof.com](https://imaadhusoof.com). 
 - **Projects (`projects.html`):** every project, and each one has its own page (`project1.html` and so on) with a description, the tech stack, a screenshot carousel, and links to the GitHub repo and the live demo.
 - **About (`about.html`):** a bit about me, my technical skills, and a download link for my CV (`cv.pdf`).
 - **Contact (`contact.html`):** email, LinkedIn and GitHub links. There's also a photo of the Old Arts building that stays dark until your cursor lights it up like a torch.
-- **404 page (`not_found.html`).**
 
 The Space Shooter page can also launch the game in your browser. It's a WebAssembly build of my [Space-shooter](https://github.com/imaadhusoof/Space-shooter) pygame project, compiled with pygbag, and it lives in `games/space-shooter/`.
 
