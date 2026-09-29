@@ -267,3 +267,65 @@ main {
   }
 
 }
+
+/* Wide carousel for desktop-app screenshots (landscape, shown uncropped) */
+.project-layout--wide {
+  max-width: 1240px;
+}
+
+.carousel--wide {
+  width: 560px;
+  height: 350px;
+}
+
+.carousel--wide .carousel-img {
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .project-layout--wide {
+    flex-direction: column;
+  }
+
+  .project-layout--wide .project-gallery {
+    width: 100%;
+  }
+
+  .carousel--wide,
+  .carousel.carousel--wide {
+    width: 100%;
+    max-width: 860px;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Click a screenshot to see it full size */
+.carousel-img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 3vw;
+  background: rgba(8, 9, 11, 0.92);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}

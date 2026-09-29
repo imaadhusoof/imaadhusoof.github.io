@@ -25,7 +25,7 @@
     </nav>
     <canvas id="constellation-canvas"></canvas>
     <main>
-      <section class="project-layout" data-reveal="stagger">
+      <section class="project-layout project-layout--wide" data-reveal="stagger">
         <div class="project-info">
           <h1 class="project-title">Inkwell</h1>
           <p class="project-tag">Project 4</p>
@@ -54,8 +54,8 @@
           <a href="https://github.com/imaadhusoof/Inkwell" target="_blank" class="github-link">&#128279; Github repository</a>
         </div>
         <div class="project-gallery">
-          <div class="carousel">
-            <img class="carousel-img" src="images/p4-1.png" alt="Inkwell screenshot" />
+          <div class="carousel carousel--wide">
+            <img class="carousel-img" src="images/inkwell-1.png" alt="Inkwell: annotated PDF with notes, in dark mode" />
           </div>
           <div class="carousel-controls">
             <button class="carousel-btn" id="prev">&#8592;</button>
@@ -82,8 +82,9 @@
     <script src="animations.js"></script>
     <script>
       const images = [
-        'images/p4-1.png',
-        'images/p4-2.png',
+        'images/inkwell-1.png',
+        'images/inkwell-2.png',
+        'images/inkwell-3.png'
       ];
       let current = 0;
       const img = document.querySelector('.carousel-img');
